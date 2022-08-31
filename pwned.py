@@ -2,6 +2,10 @@ import hashlib
 import lastpass
 import requests
 
+print("Hello, and welcome to Andrew's pwned checker!\nNote: nothing entered here is directly " \
+    "sent anywhere online. Every password is hashed with sha1 and compared with the haveibeenpwned api" \
+    " located at https://api.pwnedpasswords.com/range/.\n\n")
+
 passwords = []
 
 def usingLastPass():
@@ -29,7 +33,7 @@ while True:
         print('I\'m not sure what you meant to type')
 
 while True:
-    print('Type password, then press Enter. If you don\'t want to enter another, just press Enter.')
+    print('Type a password to be checked, then press Enter. If you don\'t want to enter another, just press Enter.')
     newPassword = input()
     if newPassword == '':
         break
